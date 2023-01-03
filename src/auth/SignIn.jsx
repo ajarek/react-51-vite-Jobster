@@ -7,7 +7,7 @@ export const SignIn = (email, password) => {
   return FetchMethod('POST', SIGN_IN_URL, {
     email,
     password,
-    returnSecureToken: true,
+    returnSecureToken: true
   })
 }
 export default SignIn

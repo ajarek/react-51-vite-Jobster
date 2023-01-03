@@ -1,4 +1,4 @@
-import React, { useContext,useState } from 'react'
+import React, { useContext,useEffect,useState } from 'react'
 import { AppContext } from '../../App'
 import MakeAuthorizedRequest from '../../auth/MakeAuthorizedRequest'
 import LoginHeader from '../../components/LoginHeader/LoginHeader'
@@ -18,12 +18,14 @@ const Login = () => {
         setEmail(data.email)
         localStorage.setItem('ID_TOKEN_KEY', data.idToken)
         localStorage.setItem('REFRESH_TOKEN_KEY', data.refreshToken)
-        const url = `https://ajarek-my-database-default-rtdb.europe-west1.firebasedatabase.app/.json`
+        const url = `https://jobster-fd2b4-default-rtdb.europe-west1.firebasedatabase.app//.json`
         const token = localStorage.getItem('ID_TOKEN_KEY')
         if (token) {
           MakeAuthorizedRequest('GET', url).then((res) => {
-            navigate('/home')
+            // navigate('/')
+           
             setDataJson(res)
+            
           })
         }
       } else {
@@ -31,7 +33,9 @@ const Login = () => {
       }
     })
   }
-
+  
+    console.log(dataJson)
+  
   return (
     <div className='wrapper'>
       <div className='login'>

@@ -1,12 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Logo.css'
 
 const Logo = () => {
   return (
-    <div className='logo'>
-            <div className='logo-symbol'>J</div>
-            <div className='logo-title'>Jobster</div>
-          </div>
+    
+      <NavLink className={'logo'} to='/'>
+        <div className='logo-symbol'>J</div>
+        <div className='logo-title'>Jobster</div>
+      </NavLink>
+    
   )
 }
 

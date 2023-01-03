@@ -5,7 +5,7 @@ import './Form.css'
 
 export const Form = ({ onSubmit, label,nameInput }) => {
   const schema = yup.object().shape({
-   name: yup.string().min(6).max(20).required(),
+   name:nameInput? yup.string().required():null,
     email: yup.string().email().required(),
     password: yup.string().min(6).max(20).required(),
   })
@@ -23,12 +23,9 @@ export const Form = ({ onSubmit, label,nameInput }) => {
       onSubmit={handleSubmit(onSubmit)}
       className={'form'}
     >
-      {nameInput? <input
-        type='text'
-        placeholder='👤Name...'
-        {...register('name')}
+      {nameInput? <input type='text'placeholder='👤Name...' {...register('name')}
       />:null}
-      <p>{errors.email?.message}</p>
+      {nameInput?<p>{errors.name?.message}</p>:null}
       <input
         type='text'
         placeholder='✉️Email...'
