@@ -39,6 +39,7 @@ const Login = () => {
         <Form
           onSubmit={onSubmit}
           label={'Login'}
+          nameInput={false}
         />
         <LoginFooter />
       </div>

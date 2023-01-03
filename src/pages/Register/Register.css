@@ -1,9 +1,17 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .register {
-  height: 634px;
-  width: 473px;
+  height: 574px;
+  width: 400px;
   border: 1px solid #bdbdbd;
-  border-radius: 24px;
-  padding: 48px 58px;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  border-top:5px solid #3b82f6 ;
 }
 @media (max-width: 474px) {
   .register {

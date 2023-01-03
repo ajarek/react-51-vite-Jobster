@@ -5,33 +5,7 @@ import './RegisterFooter.css'
 const RegisterFooter = () => {
   return (
     <div className='register-footer'>
-      <div className='info'>or continue with these social profile</div>
-      <div className='social'>
-        <a
-          href=''
-          className='social-wrapper'
-        >
-          <FaGoogle />
-        </a>
-        <a
-          href=''
-          className='social-wrapper'
-        >
-          <FaFacebookSquare />
-        </a>
-        <a
-          href=''
-          className='social-wrapper'
-        >
-          <FaTwitter />
-        </a>
-        <a
-          href=''
-          className='social-wrapper'
-        >
-          <FaGithub />
-        </a>
-      </div>
+      
       <div className='link-register'>
         Adready a member?{' '}
         <NavLink

@@ -1,16 +1,10 @@
 import React from 'react'
 import './LoginHeader.css'
-
+import Logo from '../Logo/Logo'
 const LoginHeader = () => {
   return (
     <div className='login-header'>
-      <div className='logo'>
-        <img
-          src='/favicon.ico'
-          alt=''
-        />
-        <p>@jarek</p>
-      </div>
+      <Logo/>
       <div className='content'>Login</div>
     </div>
   )

@@ -17,7 +17,8 @@ const Register = () => {
         <RegisterHeader />
         <Form
           onSubmit={onSubmit}
-          label={'Start coding now '}
+          label={'Submit '}
+          nameInput={true}
         />
         <RegisterFooter />
       </div>

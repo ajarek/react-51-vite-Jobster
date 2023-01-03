@@ -13,10 +13,11 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .login-header .content {
-  font-size: 18px;
+  
+  font-size: 2rem;
   line-height: 24, 52px;
   font-weight: 600;
   margin-top: 14px;
