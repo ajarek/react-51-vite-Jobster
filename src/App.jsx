@@ -7,9 +7,10 @@ import { useState, createContext } from 'react'
 export const AppContext = createContext()
 
 function App() {
- 
+  const [pending, setPending] = useState(true)
   return (
     <div className='App'>
+      <AppContext.Provider value={{pending, setPending }}>
       <Routes>
         <Route
           path='/'
@@ -28,7 +29,7 @@ function App() {
           element={<Dashboard />}
         />
       </Routes>
-     
+      </AppContext.Provider>
     </div>
   )
  

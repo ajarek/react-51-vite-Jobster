@@ -1,4 +1,6 @@
+import { useState } from "react"
 export const FetchMethod = async (method, url, data) => {
+  
   const headers = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -15,5 +17,6 @@ export const FetchMethod = async (method, url, data) => {
   } catch (error) {
     return error
   }
+  
 }
 export default FetchMethod

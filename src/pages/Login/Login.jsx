@@ -9,6 +9,7 @@ import SignIn from '../../auth/SignIn'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  const {pending, setPending}=useContext(AppContext)
   const  [dataJson,setDataJson ] = useState()
   const  [email,setEmail]  = useState()
   const navigate = useNavigate()
@@ -31,7 +32,7 @@ const Login = () => {
       } else {
         alert(data.error.message)
       }
-    })
+    }).finally(() => setPending(false))
   }
   
     console.log(dataJson)

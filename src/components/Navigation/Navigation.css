@@ -43,6 +43,7 @@
 .toggle-btn button{
   font-size:2rem ;
   border: none;
+  background-color: transparent;
   cursor: pointer;
   color: #3b82f6;
 }
