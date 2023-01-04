@@ -22,10 +22,10 @@ const Login = () => {
         const token = localStorage.getItem('ID_TOKEN_KEY')
         if (token) {
           MakeAuthorizedRequest('GET', url).then((res) => {
-            // navigate('/')
+            
            
             setDataJson(res)
-            
+             navigate('/dashboard')
           })
         }
       } else {
