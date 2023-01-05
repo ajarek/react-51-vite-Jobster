@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../../App'
 import { useNavigate } from 'react-router-dom'
 import Logo from '../Logo/Logo/'
 import { FaChartBar, FaRegEdit,FaRegUser,FaRegUserCircle } from "react-icons/fa";
@@ -7,6 +8,7 @@ import {AiOutlineMenuFold } from "react-icons/ai";
 import {TiArrowSortedDown } from "react-icons/ti";
 import './Navigation.css'
 const Navigation = () => {
+  const { pending, setPending } = useContext(AppContext)
   const navigate = useNavigate()
   const [toggle,setToggle]=useState(true)
   const [toggleLogout,setToggleLogout]=useState(false)
@@ -14,6 +16,7 @@ const Navigation = () => {
     localStorage.removeItem('REFRESH_TOKEN_KEY')
     localStorage.removeItem('ID_TOKEN_KEY')
     navigate('/login')
+     setPending(true)
   }
   return (
     <div className='navigation'>
