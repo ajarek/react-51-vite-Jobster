@@ -15,7 +15,6 @@ export const FormJob = ({ onSubmit, label }) => {
   })
  const  date= new Date()
   const currentDate=date.toISOString().split('T')[0]
-  console.log(currentDate);
   const {
     register,
     handleSubmit,
@@ -53,7 +52,7 @@ export const FormJob = ({ onSubmit, label }) => {
           {...register('status')}
           className='select'
         > 
-            <option value='' selected disabled>Status</option>
+            <option value='' disabled>Status</option>
           <option value='pending'>Pending</option>
           <option value='declined'>Declined</option>
           <option value='interview'>Interview</option>
@@ -63,7 +62,7 @@ export const FormJob = ({ onSubmit, label }) => {
           {...register('type')}
           className='select'
         > 
-            <option value='' selected disabled>Job Type</option>
+            <option value=''  >Job Type</option>
           <option value='full-time'>Full-time</option>
           <option value='part-time'>Part-time</option>
           <option value='remote'>Remote</option>

@@ -35,7 +35,7 @@ const Login = () => {
     }).finally(() => setPending(false))
   }
   
-    console.log(dataJson)
+    
   
   return (
     <div className='wrapper'>

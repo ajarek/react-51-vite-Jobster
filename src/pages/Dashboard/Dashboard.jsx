@@ -8,7 +8,6 @@ import FullPageLayout from '../../components/FullPageLayout/FullPageLayout'
 import './Dashboard.css'
 const Dashboard = () => {
   const { pending, setPending } = useContext(AppContext)
-  console.log(pending)
   return (
     <div className='dashboard'>
       {pending ? (

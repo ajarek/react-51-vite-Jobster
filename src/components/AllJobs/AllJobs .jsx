@@ -1,8 +1,8 @@
 import React from 'react'
 import FormJob from '../FormJob/FormJob'
 import Post from '../../auth/Post'
-import './JobsList.css'
-const JobsList = ({style}) => {
+import './AllJobs .css'
+const AllJobs  = ({style}) => {
   const TOKEN =localStorage.getItem('ID_TOKEN_KEY')
   const urlPost =
   `https://jobster-fd2b4-default-rtdb.europe-west1.firebasedatabase.app/.json?auth=${TOKEN}`
@@ -14,12 +14,9 @@ const JobsList = ({style}) => {
     className='job-list'
     style={style}
     >
-      <FormJob 
-      label={'Submit'}
-      onSubmit={onSubmit}
-      />
+      <h1>All jobs</h1>
     </div>
   )
 }
 
-export default JobsList
+export default AllJobs 

@@ -6,9 +6,12 @@ import { FaChartBar, FaRegEdit,FaRegUser,FaRegUserCircle } from "react-icons/fa"
 import { TbReportSearch } from "react-icons/tb";
 import {AiOutlineMenuFold } from "react-icons/ai";
 import {TiArrowSortedDown } from "react-icons/ti";
-import JobsList from '../../components/JobsList/JobsList'
+import AddJobs from '../../components/AddJobs/AddJobs'
+import AllJobs  from '../../components/AllJobs/AllJobs '
 import './Navigation.css'
 const Navigation = () => {
+  const[addJob,setAddJob] = useState(false)
+  const[allJob,setAllJob] = useState(false)
   const { pending, setPending } = useContext(AppContext)
   const navigate = useNavigate()
   const [toggle,setToggle]=useState(true)
@@ -27,9 +30,9 @@ const Navigation = () => {
       >
         <Logo/>
         <div className="aside-icon">
-        <p><FaChartBar/> <span>  Stats</span></p>
-        <p><TbReportSearch/><span>  All Jobs</span> </p>
-        <p><FaRegEdit/><span>  Add Job</span> </p>
+        <p ><FaChartBar/> <span>  Stats</span></p>
+        <p onClick={()=>{setAllJob(!allJob);addJob?setAddJob(false):null}}><TbReportSearch/><span>  All Jobs</span> </p>
+        <p onClick={()=>{setAddJob(!addJob);allJob?setAllJob(false):null}}><FaRegEdit/><span>  Add Job</span> </p>
         <p><FaRegUser/><span>  Profile</span> </p>
         </div>
       </aside>
@@ -66,9 +69,16 @@ const Navigation = () => {
         </div>
         
       </nav>
-      <JobsList 
+      {allJob &&
+      <AllJobs 
       style={toggle?{ width:' 80%', left:' 20%'}:{ width:' 100%', left:' 0%'}}
        />
+      }
+      {addJob &&
+      <AddJobs 
+      style={toggle?{ width:' 80%', left:' 20%'}:{ width:' 100%', left:' 0%'}}
+       />
+      }
     </div>
   )
 }
