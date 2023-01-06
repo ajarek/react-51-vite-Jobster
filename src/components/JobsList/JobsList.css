@@ -1,0 +1,10 @@
+.job-list{
+  position: absolute;
+  
+  top: 15vh;
+ 
+  min-height: 85vh;
+  border: solid red;
+  padding: 1rem;
+
+}

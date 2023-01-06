@@ -6,6 +6,7 @@ import { FaChartBar, FaRegEdit,FaRegUser,FaRegUserCircle } from "react-icons/fa"
 import { TbReportSearch } from "react-icons/tb";
 import {AiOutlineMenuFold } from "react-icons/ai";
 import {TiArrowSortedDown } from "react-icons/ti";
+import JobsList from '../../components/JobsList/JobsList'
 import './Navigation.css'
 const Navigation = () => {
   const { pending, setPending } = useContext(AppContext)
@@ -32,6 +33,7 @@ const Navigation = () => {
         <p><FaRegUser/><span>  Profile</span> </p>
         </div>
       </aside>
+      
       <nav className='nav'>
         <div className="toggle-btn">
           <button
@@ -62,7 +64,11 @@ const Navigation = () => {
 
 
         </div>
+        
       </nav>
+      <JobsList 
+      style={toggle?{ width:' 80%', left:' 20%'}:{ width:' 100%', left:' 0%'}}
+       />
     </div>
   )
 }
