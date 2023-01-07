@@ -9,7 +9,7 @@ const AllJobs = ({ style }) => {
   console.log(data)
   return (
     <div
-      className='job-list'
+      className='job-all-list'
       style={style}
     >
       {data &&

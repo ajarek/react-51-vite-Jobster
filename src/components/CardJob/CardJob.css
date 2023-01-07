@@ -4,5 +4,63 @@
   display: flex;
   flex-direction: column;
  justify-content: space-evenly;
- align-items: center;
+ align-items: flex-start;
+ box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+ padding: 1rem;
+ letter-spacing: 1px;
+}
+.logo-name-wrapper{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.name-wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 3rem;
+  
+}
+.name-wrapper .position{
+  font-size: 1.3rem;
+}
+.name-wrapper .company{
+  font-size: 1.1rem;
+  color: gray;
+}
+.card-logo{
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;justify-content: center;
+  background-color:#3b82f6;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.location-date-wrapper,.select-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.button-wrapper button{
+padding: 0.5rem 1rem;
+border-radius: 5px;
+margin-right: 1rem;
+border: none;
+}
+.button-wrapper .edit{
+  background-color: #7fffd4;
+}
+.button-wrapper .delete{
+background-color:#fa6e79 ;
 }

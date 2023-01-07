@@ -1,10 +1,11 @@
-.job-list{
+.job-all-list {
   position: absolute;
-  
   top: 15vh;
- 
   min-height: 85vh;
-  border: solid red;
   padding: 1rem;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  align-items: start;
+  gap: 1rem;
 }
