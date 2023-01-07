@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { AppContext } from '../../App'
+import React,{useState} from 'react'
+import jwt_decode from "jwt-decode";
 import { useNavigate } from 'react-router-dom'
 import Logo from '../Logo/Logo/'
 import { FaChartBar, FaRegEdit,FaRegUser,FaRegUserCircle } from "react-icons/fa";
@@ -12,7 +12,6 @@ import './Navigation.css'
 const Navigation = () => {
   const[addJob,setAddJob] = useState(false)
   const[allJob,setAllJob] = useState(false)
-  const { pending, setPending } = useContext(AppContext)
   const navigate = useNavigate()
   const [toggle,setToggle]=useState(true)
   const [toggleLogout,setToggleLogout]=useState(false)
@@ -20,8 +19,11 @@ const Navigation = () => {
     localStorage.removeItem('REFRESH_TOKEN_KEY')
     localStorage.removeItem('ID_TOKEN_KEY')
     navigate('/login')
-     setPending(true)
+   
   }
+  const token = localStorage.getItem('ID_TOKEN_KEY')
+  const decoded = jwt_decode(token);
+  
   return (
     <div className='navigation'>
       <aside 
@@ -58,7 +60,7 @@ const Navigation = () => {
            className='btn-user'
            onClick={()=>setToggleLogout(!toggleLogout)}
           >
-            <FaRegUserCircle/> Ajarek <TiArrowSortedDown/></button>
+            <FaRegUserCircle/>{decoded.email.split('@')[0]}<TiArrowSortedDown/></button>
           <button 
           className='btn-logout'
           onClick={onClickLogOut}

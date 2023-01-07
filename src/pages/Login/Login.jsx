@@ -1,4 +1,4 @@
-import React, { useContext,useEffect,useState } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../../App'
 import MakeAuthorizedRequest from '../../auth/MakeAuthorizedRequest'
 import LoginHeader from '../../components/LoginHeader/LoginHeader'
@@ -9,30 +9,30 @@ import SignIn from '../../auth/SignIn'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-  const {pending, setPending}=useContext(AppContext)
-  const  [dataJson,setDataJson ] = useState()
-  const  [email,setEmail]  = useState()
+  
   const navigate = useNavigate()
   const onSubmit = async (data) => {
     await SignIn(data.email, data.password).then((data) => {
+      console.log(data);
       if (data.email) {
-        setEmail(data.email)
+        
         localStorage.setItem('ID_TOKEN_KEY', data.idToken)
         localStorage.setItem('REFRESH_TOKEN_KEY', data.refreshToken)
         const url = `https://jobster-fd2b4-default-rtdb.europe-west1.firebasedatabase.app//.json`
         const token = localStorage.getItem('ID_TOKEN_KEY')
         if (token) {
+
           MakeAuthorizedRequest('GET', url).then((res) => {
             
            
-            setDataJson(res)
+           
              navigate('/dashboard')
           })
         }
       } else {
         alert(data.error.message)
       }
-    }).finally(() => setPending(false))
+    })
   }
   
     

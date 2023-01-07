@@ -7,10 +7,10 @@ import { useState, createContext } from 'react'
 export const AppContext = createContext()
 
 function App() {
-  const [pending, setPending] = useState(true)
+  const [email, setEmail] = useState('')
   return (
     <div className='App'>
-      <AppContext.Provider value={{pending, setPending }}>
+      <AppContext.Provider value={{email, setEmail }}>
       <Routes>
         <Route
           path='/'
