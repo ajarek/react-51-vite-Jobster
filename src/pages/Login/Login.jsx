@@ -13,7 +13,6 @@ const Login = () => {
   const navigate = useNavigate()
   const onSubmit = async (data) => {
     await SignIn(data.email, data.password).then((data) => {
-      console.log(data);
       if (data.email) {
         
         localStorage.setItem('ID_TOKEN_KEY', data.idToken)

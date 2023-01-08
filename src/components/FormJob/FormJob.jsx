@@ -18,7 +18,7 @@ export const FormJob = ({ onSubmit, label }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm({
     resolver: yupResolver(schema),
   })
