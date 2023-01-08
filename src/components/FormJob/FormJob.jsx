@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import './FormJob.css'
+import { useEffect } from 'react'
 
 export const FormJob = ({ onSubmit, label }) => {
   
@@ -18,15 +19,29 @@ export const FormJob = ({ onSubmit, label }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    reset,
+    formState,
+    formState: { errors,isSubmitSuccessful }
   } = useForm({
     resolver: yupResolver(schema),
   })
+useEffect(()=>{
+if (formState.isSubmitSuccessful){
+reset({
+  position:'',
+  company:'',
+  location:'',
+  status:'',
+  type:''
+})
 
+}
+},[formState,reset])
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit,reset)}
       className={'form'}
+      
     >
       <h1>Add Job</h1>
       <input
@@ -52,7 +67,7 @@ export const FormJob = ({ onSubmit, label }) => {
           {...register('status')}
           className='select'
         > 
-            <option value='' disabled>Status</option>
+            <option value=''>Status</option>
           <option value='pending'>Pending</option>
           <option value='declined'>Declined</option>
           <option value='interview'>Interview</option>
