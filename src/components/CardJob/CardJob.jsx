@@ -3,7 +3,7 @@ import { FaMapMarkerAlt,FaRegCalendarAlt,FaBriefcase } from 'react-icons/fa';
 
 import './CardJob.css'
 const CardJob = (props) => {
- const {position,company,location,date,status,type}=props
+ const {position,company,location,date,status,type,onClick}=props
   return (
     <div className='card-job'>
       <div className="logo-name-wrapper">
@@ -24,7 +24,7 @@ const CardJob = (props) => {
       </div>
       <div className="button-wrapper">
         <button className='edit'>Edit</button>
-        <button className='delete'>Delete</button>
+        <button className='delete' onClick={onClick}>Delete</button>
       </div>
     </div>
   )
