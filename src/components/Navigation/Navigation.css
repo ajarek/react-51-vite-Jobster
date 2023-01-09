@@ -80,3 +80,38 @@ position: absolute;
 top: 50px;
 display: block;
 }
+@media (max-width:1030px) {
+   .aside{
+    width: 0px;
+    padding: 0;
+   }
+  .aside-icon{
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    z-index: 2;
+    width: 50%;
+    height: 98px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .aside-icon p{
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: none;
+  }
+  .toggle-btn,.nav-title h1{
+    display: none;
+  }
+  .job-list{
+    width: 100vw;
+  }
+  .nav-logout{
+    width: 113px;
+    height: 30px; 
+    position: relative;
+   }
+   .nav-logout .btn-logout{
+    top: 32px;
+   }
+}

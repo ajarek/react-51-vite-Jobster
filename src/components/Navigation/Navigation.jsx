@@ -32,10 +32,8 @@ const Navigation = () => {
       >
         <Logo/>
         <div className="aside-icon">
-        <p ><FaChartBar/> <span>  Stats</span></p>
         <p onClick={()=>{setAllJob(!allJob);addJob?setAddJob(false):null}}><TbReportSearch/><span>  All Jobs</span> </p>
         <p onClick={()=>{setAddJob(!addJob);allJob?setAllJob(false):null}}><FaRegEdit/><span>  Add Job</span> </p>
-        <p><FaRegUser/><span>  Profile</span> </p>
         </div>
       </aside>
       

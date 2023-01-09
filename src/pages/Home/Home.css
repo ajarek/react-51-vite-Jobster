@@ -66,3 +66,21 @@
   width: 100%;
   object-fit: cover;
 }
+@media (max-width:928px) {
+  .home{
+    grid-template-columns: repeat(1 ,1fr);
+    padding: 1rem;
+  }
+  .right-panel .img{
+    width: 280px;
+  }
+  .left-panel .title h1{
+    font-size: 2rem;
+  }
+  .left-panel .title,.left-panel .btn{
+    justify-content: center;
+  }
+  .left-panel .info{
+    padding-right: 0;
+  }
+}

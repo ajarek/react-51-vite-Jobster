@@ -23,7 +23,6 @@ const CardJob = (props) => {
        
       </div>
       <div className="button-wrapper">
-        <button className='edit'>Edit</button>
         <button className='delete' onClick={onClick}>Delete</button>
       </div>
     </div>

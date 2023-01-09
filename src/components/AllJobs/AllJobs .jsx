@@ -37,7 +37,7 @@ const AllJobs = ({ style }) => {
           const value = entry[1]
           return( <div key={key} >
             <CardJob
-            onClick={()=>{Delete(key)}}
+            onClick={()=>{Delete(key);setTimeout(()=>{location.reload()},200)}}
             position={value.position}
             company={value.company}
             location={value.location}

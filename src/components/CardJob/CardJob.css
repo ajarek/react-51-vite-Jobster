@@ -58,9 +58,7 @@ border-radius: 5px;
 margin-right: 1rem;
 border: none;
 }
-.button-wrapper .edit{
-  background-color: #7fffd4;
-}
+
 .button-wrapper .delete{
 background-color:#fa6e79 ;
 }

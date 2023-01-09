@@ -3,4 +3,9 @@
   top: 15vh;
   min-height: 85vh;
   padding: 1rem;
+/* }@media (max-width:1030px) {
+  .job-list{
+    left:0 ;
+    width: 100%;
+} */
 }
