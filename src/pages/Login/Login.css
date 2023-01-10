@@ -11,7 +11,7 @@
   border: 1px solid #bdbdbd;
   border-radius: 8px;
   padding: 2rem 2.5rem;
-  border-top:5px solid #3b82f6 ;
+  border-top: 5px solid #3b82f6;
 }
 @media (max-width: 474px) {
   .login {

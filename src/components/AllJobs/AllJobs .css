@@ -9,3 +9,11 @@
   align-items: start;
   gap: 1rem;
 }
+@media (max-width: 1030px) {
+  .job-all-list {
+    top: 20vh;
+    transform: translateX(-20%);
+    padding: 0rem;
+    grid-template-columns: 1fr;
+  }
+}

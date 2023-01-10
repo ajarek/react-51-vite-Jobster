@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import jwt_decode from 'jwt-decode'
 import FormJob from '../FormJob/FormJob'
 import Post from '../../auth/Post'
@@ -11,9 +11,8 @@ const AddJobs = ({ style }) => {
 
   const onSubmit = (data) => {
     Post(urlPost, data)
-   
   }
-  
+
   return (
     <div
       className='job-list'

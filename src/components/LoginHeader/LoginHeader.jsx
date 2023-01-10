@@ -4,7 +4,7 @@ import Logo from '../Logo/Logo'
 const LoginHeader = () => {
   return (
     <div className='login-header'>
-      <Logo/>
+      <Logo />
       <div className='content'>Login</div>
     </div>
   )

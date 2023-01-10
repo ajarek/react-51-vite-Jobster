@@ -4,12 +4,13 @@ import './Logo.css'
 
 const Logo = () => {
   return (
-    
-      <NavLink className={'logo'} to='/'>
-        <div className='logo-symbol'>J</div>
-        <div className='logo-title'>Jobster</div>
-      </NavLink>
-    
+    <NavLink
+      className={'logo'}
+      to='/'
+    >
+      <div className='logo-symbol'>J</div>
+      <div className='logo-title'>Jobster</div>
+    </NavLink>
   )
 }
 

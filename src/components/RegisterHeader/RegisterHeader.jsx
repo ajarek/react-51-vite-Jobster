@@ -4,7 +4,7 @@ import Logo from '../Logo/Logo'
 const RegisterHeader = () => {
   return (
     <div className='login-header'>
-      <Logo/>
+      <Logo />
       <div className='content'>Register</div>
     </div>
   )

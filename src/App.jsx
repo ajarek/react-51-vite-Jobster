@@ -3,14 +3,10 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
-import { useState, createContext } from 'react'
-export const AppContext = createContext()
 
 function App() {
-  const [email, setEmail] = useState('')
   return (
     <div className='App'>
-      <AppContext.Provider value={{email, setEmail }}>
       <Routes>
         <Route
           path='/'
@@ -29,10 +25,8 @@ function App() {
           element={<Dashboard />}
         />
       </Routes>
-      </AppContext.Provider>
     </div>
   )
- 
 }
 
 export default App
