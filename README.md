@@ -1,6 +1,6 @@
 # react-51-vite-Jobster
 # npm install
-#add file .env from VITE_KEY_ID "your Fairbase"
+# add file .env from VITE_KEY_ID "your Fairbase"
 # start: npm run dev
 
 ![Schowek01](https://user-images.githubusercontent.com/61388692/211662509-ea6108dc-02af-4557-83ee-a96f63c33911.png)
